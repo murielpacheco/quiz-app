@@ -1,0 +1,29 @@
+.question {
+  &-span {
+    background-color: #fff;
+    padding: 2rem 4rem;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+.button-total {
+  background-color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  margin: 16px auto;
+  display: flex;
+
+
+  justify-content:center;
+  align-items: center;
+}
