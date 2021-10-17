@@ -22,6 +22,7 @@ button {
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
   transition: transform 0.2s, -webkit-transform 0.2s;
+  color: #475747;
 }
 
 button:hover {
@@ -33,5 +34,46 @@ button:hover {
 
 .correct {
   background-color: #51ff51;
+}
+
+.next-question {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff;
+  width: 120px;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.next-question:hover {
+  -webkit-transform: scale(1.13);
+          transform: scale(1.13);
+  -webkit-filter: brightness(0.95);
+          filter: brightness(0.95);
+}
+
+.total-questions {
+  color: #5ed15e;
+  background-color: #5d7e5d;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=styles.css.map */

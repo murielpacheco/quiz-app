@@ -50,7 +50,8 @@
   2. [x] Separar em componentes 
   3. [x] Mexer na API e receber os dados
   4. [] Começar as funcionalidades
-    a. [] Func. de randomizar ordem das questões e perguntas
-    b. [] Func. de marcar como certa.
-    c. [] Func. de passar de questão
-    d. [] Func. de mostrar a atual/total;
+    a. [x] Func. de randomizar ordem das questões e perguntas
+    b. [x] Func. de passar de questão
+    c. [x] Func. de mostrar a atual/total;
+    d. [] Func. de marcar como certa.
+    e. [] Func. renderizar a endScreen
