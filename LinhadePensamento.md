@@ -49,9 +49,10 @@
   1. [x] Fazer o HTML e CSS 
   2. [x] Separar em componentes 
   3. [x] Mexer na API e receber os dados
-  4. [] Começar as funcionalidades
+  4. [x] Começar as funcionalidades
     a. [x] Func. de randomizar ordem das questões e perguntas
     b. [x] Func. de passar de questão
     c. [x] Func. de mostrar a atual/total;
     d. [] Func. de marcar como certa.
-    e. [] Func. renderizar a endScreen
+    e. [] Func. de deixar as opções desabilitadas após marcar resposta
+    f. [x] Func. renderizar a endScreen
