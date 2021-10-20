@@ -1,12 +1,19 @@
-import React from 'react'
+import {useContext} from 'react'
+import {QuestionContext} from '../../contexts/QuestionContext'
+
 import './styles.css'
-const endScreen = ( {setGame, game}) => {
+export function EndScreen() {
+
+  const {setGame,setCurrentQuestion,setScore, score, dataQuestions} = useContext(QuestionContext)
+  function restartGame() {
+    setGame(true);
+    setCurrentQuestion(0);
+    setScore(0)
+  }
   return (
     <div className="end-screen">
-      <h1>Você concluiu o quiz! Sua pontuação foi de: 7/10</h1>
-        <button onClick={() => setGame(true)}className="play-again">Jogar novamente</button>
+      <h1>{`Você concluiu o quiz! Sua pontuação foi de: ${score}/${dataQuestions.length}`}</h1>
+        <button onClick={restartGame}className="play-again">Jogar novamente</button>
     </div>
   )
 }
-
-export default endScreen

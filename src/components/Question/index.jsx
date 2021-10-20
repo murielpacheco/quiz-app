@@ -1,20 +1,16 @@
 import './styles.css'
-import {useState} from 'react';
-import QuestionButtons from '../QuestionButtons'
+import {useContext} from 'react';
+import {QuestionContext} from '../../contexts/QuestionContext'
+import { QuestionButtons } from '../QuestionButtons'
 
-const Question = ({ dataQuestions, game, setGame}) => {
-  const [currentQuestion, setCurrentQuestion] = useState(0)
+export function Question ()  {
+  const {dataQuestions, currentQuestion} = useContext(QuestionContext)
 
-  const handleNextQuestion = () => {
-    setCurrentQuestion(currentQuestion + 1)
-  }
   return (
     <div className="question">
         <span className="question-span" dangerouslySetInnerHTML={{__html: dataQuestions[currentQuestion].question}}></span>  
-     <QuestionButtons dataQuestions={dataQuestions} handleNextQuestion={handleNextQuestion} currentQuestion={currentQuestion} game={game} setGame={setGame} />
+     <QuestionButtons/>
 
     </div>
   )
 }
-
-export default Question

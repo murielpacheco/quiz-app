@@ -1,31 +1,15 @@
 import './styles/global.css';
 import './styles/loadingAnimation.css';
 
-import Question from '../src/components/Question';
-import EndScreen from '../src/components/EndScreen'
-import { useEffect, useState } from 'react';
+import {Question} from '../src/components/Question';
+import {EndScreen} from '../src/components/EndScreen'
+import { useContext } from 'react';
+import {QuestionContext} from './contexts/QuestionContext'
 function App() {
-  
-  // api related
-  const API_URL =
-    'https://opentdb.com/api.php?amount=10&category=23&difficulty=easy&type=multiple';
-
-  const [dataQuestions, setDataQuestions] = useState([]);
-  const [loading, setLoading] = useState(true);
-
+  const {loading, game} = useContext(QuestionContext)
   //main states
-  const [game, setGame] = useState(false);
 
-
-  useEffect(() => {
-    fetch(API_URL)
-      .then((response) => response.json())
-      .then((data) => {
-        setDataQuestions(data.results);
-        setLoading(false);
-      });
-  }, []);
-
+  
   if (loading)
     return (
       <div className='loadingio-spinner-reload-sbn9sl2a8xp'>
@@ -42,15 +26,9 @@ function App() {
   return (
     <div className='container'>
       {game ? (
-        <Question
-          dataQuestions={dataQuestions}
-          setDataQuestions={setDataQuestions}
-          game={game}
-          setGame={setGame}
-        />
-        
+        <Question/>
       ) : (
-        <EndScreen setGame={setGame} game={game}/>
+        <EndScreen/>
       )}
     </div>
   );
